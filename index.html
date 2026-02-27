@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="GOKULRAJ R" content="width=device-width, initial-scale=1.0">
+    <title>Gokul Raj | Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header/Profile Section */
+        .profile-header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #667eea;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+
+        .profile-header h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .profile-header .title {
+            font-size: 1.2em;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .profile-header p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            background: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About Section */
+        .about-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .about-section p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-item h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects-section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .project-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .project-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: #764ba2;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .contact-btn:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-header h1 {
+                font-size: 2em;
+            }
+
+            .about-section h2,
+            .skills-section h2,
+            .experience-section h2,
+            .projects-section h2 {
+                font-size: 1.5em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID" alt="Gokul Raj" class="profile-img">
+            <h1>Gokul Raj</h1>
+            <p class="title">Full Stack Developer | Web Designer</p>
+            <p>Passionate about creating beautiful and functional web experiences. Building projects with modern technologies and best practices.</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/Gokulraj1721" title="GitHub">G</a>
+                <a href="https://linkedin.com/in/yourprofile" title="LinkedIn">in</a>
+                <a href="https://twitter.com/yourprofile" title="Twitter">𝕏</a>
+                <a href="mailto:your.email@gmail.com" title="Email">✉</a>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>I'm a passionate full stack developer with expertise in building modern web applications. I love working with cutting-edge technologies and creating intuitive user experiences that solve real-world problems.</p>
+            <p>With a strong foundation in both frontend and backend development, I'm committed to writing clean, maintainable code and following best practices in software development.</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, React, Vue.js</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <p>Node.js, Python, PHP, Laravel, Express</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <p>MySQL, MongoDB, PostgreSQL</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Others</h3>
+                    <p>Git, Docker, REST APIs, WordPress</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="experience-section">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Senior Developer</h3>
+                <p class="date">January 2023 - Present</p>
+                <p>Leading development of innovative web solutions for enterprise clients. Architecting scalable systems and mentoring junior developers.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Full Stack Developer</h3>
+                <p class="date">June 2021 - December 2022</p>
+                <p>Developed and maintained multiple web applications using modern tech stacks. Collaborated with teams to deliver high-quality solutions.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Junior Developer</h3>
+                <p class="date">January 2020 - May 2021</p>
+                <p>Started my career building responsive web applications and learning industry best practices.</p>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects-section">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-featured e-commerce platform built with React, Node.js, and MongoDB. Features include product management, shopping cart, and secure payment integration.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Task Management App</h3>
+                <p>Collaborative task management application with real-time updates. Built with Vue.js for frontend and Laravel for backend.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Blog Platform</h3>
+                <p>Custom WordPress theme for blog platform with SEO optimization and responsive design. Supports multiple categories and tags.</p>
+                <a href="#">View Project →</a>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2>Let's Work Together</h2>
+            <p>I'm always interested in hearing about new projects and opportunities.</p>
+            <a href="mailto:your.email@gmail.com" class="contact-btn">Get In Touch</a>
+        </div>
+    </div>
+</body>
+</html>
