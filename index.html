@@ -1,421 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="GOKULRAJ R" content="width=device-width, initial-scale=1.0">
-    <title>Gokul Raj | Full Stack Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<title>Gokulraj R - Resume</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+    .resume {
+        max-width: 900px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    /* LEFT PANEL */
+    .left {
+        background: #0b3c6d;
+        color: #fff;
+        padding: 25px;
+    }
 
-        /* Header/Profile Section */
-        .profile-header {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 15px;
+    }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 5px solid #667eea;
-            object-fit: cover;
-            background: #f0f0f0;
-        }
+    .left h2 {
+        font-size: 18px;
+        margin-top: 25px;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+    }
 
-        .profile-header h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
+    .left p, .left li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
 
-        .profile-header .title {
-            font-size: 1.2em;
-            color: #667eea;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+    .left ul {
+        padding-left: 18px;
+    }
 
-        .profile-header p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 1em;
-        }
+    /* RIGHT PANEL */
+    .right {
+        padding: 30px;
+    }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
+    .right h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #0b3c6d;
+    }
 
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: #667eea;
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
+    .section {
+        margin-top: 25px;
+    }
 
-        .social-links a:hover {
-            background: #764ba2;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+    .section h3 {
+        font-size: 18px;
+        color: #0b3c6d;
+        border-bottom: 2px solid #0b3c6d;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
 
-        /* About Section */
-        .about-section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
+    .section p, .section li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 
-        .about-section h2 {
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .about-section p {
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        /* Skills Section */
-        .skills-section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .skills-section h2 {
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-card h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .skill-card p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        /* Experience Section */
-        .experience-section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .experience-section h2 {
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .experience-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-item h3 {
-            color: #667eea;
-            font-size: 1.3em;
-            margin-bottom: 5px;
-        }
-
-        .experience-item .date {
-            color: #999;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-
-        .experience-item p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Projects Section */
-        .projects-section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .projects-section h2 {
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .project-card {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 5px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            background: #f0f0f0;
-            transform: translateX(5px);
-        }
-
-        .project-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .project-card a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .project-card a:hover {
-            color: #764ba2;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-section h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-
-        .contact-section p {
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid white;
-        }
-
-        .contact-btn:hover {
-            background: transparent;
-            color: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .profile-header h1 {
-                font-size: 2em;
-            }
-
-            .about-section h2,
-            .skills-section h2,
-            .experience-section h2,
-            .projects-section h2 {
-                font-size: 1.5em;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-links {
-                gap: 10px;
-            }
-        }
-    </style>
+    .date {
+        float: right;
+        font-size: 13px;
+        color: #555;
+    }
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Profile Header -->
-        <div class="profile-header">
-            <img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID" alt="Gokul Raj" class="profile-img">
-            <h1>Gokul Raj</h1>
-            <p class="title">Full Stack Developer | Web Designer</p>
-            <p>Passionate about creating beautiful and functional web experiences. Building projects with modern technologies and best practices.</p>
-            
-            <div class="social-links">
-                <a href="https://github.com/Gokulraj1721" title="GitHub">G</a>
-                <a href="https://linkedin.com/in/yourprofile" title="LinkedIn">in</a>
-                <a href="https://twitter.com/yourprofile" title="Twitter">𝕏</a>
-                <a href="mailto:your.email@gmail.com" title="Email">✉</a>
-            </div>
-        </div>
 
-        <!-- About Section -->
-        <div class="about-section">
-            <h2>About Me</h2>
-            <p>I'm a passionate full stack developer with expertise in building modern web applications. I love working with cutting-edge technologies and creating intuitive user experiences that solve real-world problems.</p>
-            <p>With a strong foundation in both frontend and backend development, I'm committed to writing clean, maintainable code and following best practices in software development.</p>
-        </div>
+<div class="resume">
 
-        <!-- Skills Section -->
-        <div class="skills-section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React, Vue.js</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Backend</h3>
-                    <p>Node.js, Python, PHP, Laravel, Express</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Database</h3>
-                    <p>MySQL, MongoDB, PostgreSQL</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools & Others</h3>
-                    <p>Git, Docker, REST APIs, WordPress</p>
-                </div>
-            </div>
-        </div>
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <img src="your-photo.jpg" alt="Gokulraj R" class="profile-img">
 
-        <!-- Experience Section -->
-        <div class="experience-section">
-            <h2>Experience</h2>
-            
-            <div class="experience-item">
-                <h3>Senior Developer</h3>
-                <p class="date">January 2023 - Present</p>
-                <p>Leading development of innovative web solutions for enterprise clients. Architecting scalable systems and mentoring junior developers.</p>
-            </div>
+        <h2>Contact</h2>
+        <p>Email: gokulraj172145@gmail.com</p>
+        <p>Phone: +91 99344 18229</p>
+        <p>Address: Rajan Nagar, Coimbatore – 638451</p>
 
-            <div class="experience-item">
-                <h3>Full Stack Developer</h3>
-                <p class="date">June 2021 - December 2022</p>
-                <p>Developed and maintained multiple web applications using modern tech stacks. Collaborated with teams to deliver high-quality solutions.</p>
-            </div>
+        <h2>Skills</h2>
+        <ul>
+            <li>Problem Solving</li>
+            <li>Team Building</li>
+            <li>Decision Making</li>
+            <li>Python Programming</li>
+            <li>AutoDesk PowerShape</li>
+        </ul>
 
-            <div class="experience-item">
-                <h3>Junior Developer</h3>
-                <p class="date">January 2020 - May 2021</p>
-                <p>Started my career building responsive web applications and learning industry best practices.</p>
-            </div>
-        </div>
-
-        <!-- Projects Section -->
-        <div class="projects-section">
-            <h2>Featured Projects</h2>
-            
-            <div class="project-card">
-                <h3>E-Commerce Platform</h3>
-                <p>A full-featured e-commerce platform built with React, Node.js, and MongoDB. Features include product management, shopping cart, and secure payment integration.</p>
-                <a href="#">View Project →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Task Management App</h3>
-                <p>Collaborative task management application with real-time updates. Built with Vue.js for frontend and Laravel for backend.</p>
-                <a href="#">View Project →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Blog Platform</h3>
-                <p>Custom WordPress theme for blog platform with SEO optimization and responsive design. Supports multiple categories and tags.</p>
-                <a href="#">View Project →</a>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h2>Let's Work Together</h2>
-            <p>I'm always interested in hearing about new projects and opportunities.</p>
-            <a href="mailto:your.email@gmail.com" class="contact-btn">Get In Touch</a>
-        </div>
+        <h2>Languages</h2>
+        <ul>
+            <li>Tamil</li>
+            <li>Kannada</li>
+            <li>English</li>
+        </ul>
     </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <h1>GOKULRAJ R</h1>
+
+        <div class="section">
+            <h3>Objective</h3>
+            <p>
+                Looking for a challenging job with a rapidly growing organization
+                that provides opportunities to achieve professional and organizational goals.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Experience</h3>
+            <p><b>Pricol Pvt Ltd – PCB Manufacturing</b>
+                <span class="date">Jul 2024 – Jan 2024</span>
+            </p>
+            <ul>
+                <li>Manufactured and assembled vehicle speedometer PCBs</li>
+                <li>PCB mounting, soldering, routing and IC programming</li>
+                <li>Final testing and assembly section handling</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Education</h3>
+            <p><b>Diploma in EEE</b> – Nanjiah Lingammal Polytechnic College
+                <span class="date">2020 – 2023</span><br>
+                Percentage: 73%
+            </p>
+            <p><b>B.E ECE</b> – SNS College of Technology, Coimbatore
+                <span class="date">2024 – 2027</span><br>
+                CGPA: 7.42
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Projects</h3>
+            <ul>
+                <li><b>Car Indicator using Gyro Sensor:</b>
+                    Automatic indicator activation during lane change using steering angle.
+                </li>
+                <li><b>Arduino Based Solar Position Changing:</b>
+                    Solar panel tracks sun position using LDR sensors for maximum power.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Internship</h3>
+            <p>
+                <b>Smart Environment Monitoring System using IoT</b><br>
+                Designed an IoT system for real-time environmental data monitoring,
+                improving sensor accuracy and power efficiency.
+            </p>
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>
