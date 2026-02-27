@@ -1,181 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Gokulraj R - Resume</title>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokulraj R | Electronics & IoT Engineer</title>
 
-    .resume {
-        max-width: 900px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 30% 70%;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* LEFT PANEL */
-    .left {
-        background: #0b3c6d;
-        color: #fff;
-        padding: 25px;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+        }
 
-    .profile-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto 15px;
-    }
+        .container { max-width: 900px; margin: auto; }
 
-    .left h2 {
-        font-size: 18px;
-        margin-top: 25px;
-        border-bottom: 1px solid #fff;
-        padding-bottom: 5px;
-    }
+        .profile-header,
+        .about-section,
+        .skills-section,
+        .experience-section,
+        .projects-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
 
-    .left p, .left li {
-        font-size: 14px;
-        margin: 8px 0;
-    }
+        .profile-header { text-align: center; }
 
-    .left ul {
-        padding-left: 18px;
-    }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
 
-    /* RIGHT PANEL */
-    .right {
-        padding: 30px;
-    }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .title { color: #667eea; font-weight: 600; margin-bottom: 15px; }
 
-    .right h1 {
-        margin: 0;
-        font-size: 28px;
-        color: #0b3c6d;
-    }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-    .section {
-        margin-top: 25px;
-    }
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .section h3 {
-        font-size: 18px;
-        color: #0b3c6d;
-        border-bottom: 2px solid #0b3c6d;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
+        .social-links a:hover {
+            background: #764ba2;
+            transform: translateY(-3px);
+        }
 
-    .section p, .section li {
-        font-size: 14px;
-        line-height: 1.6;
-    }
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
 
-    .date {
-        float: right;
-        font-size: 13px;
-        color: #555;
-    }
-</style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .experience-item, .project-card {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item h3 { color: #667eea; }
+
+        .project-card {
+            background: #f9f9f9;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .contact-btn {
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+        }
+    </style>
 </head>
 
 <body>
+<div class="container">
 
-<div class="resume">
+    <!-- PROFILE -->
+    <div class="profile-header">
+        <img src="profile.jpg" alt="Gokulraj R" class="profile-img">
+        <h1>Gokulraj R</h1>
+        <p class="title">Electronics & Communication Engineer | IoT | PCB Manufacturing</p>
+        <p>Motivated ECE student with hands-on experience in PCB manufacturing, IoT systems, and embedded projects. Passionate about electronics, automation, and real-world problem solving.</p>
 
-    <!-- LEFT SIDE -->
-    <div class="left">
-        <img src="your-photo.jpg" alt="Gokulraj R" class="profile-img">
+        <div class="social-links">
+            <a href="mailto:gokulraj172145@gmail.com">✉</a>
+            <a href="https://github.com/Gokulraj1721">G</a>
+            <a href="#">in</a>
+        </div>
+    </div>
 
-        <h2>Contact</h2>
-        <p>Email: gokulraj172145@gmail.com</p>
-        <p>Phone: +91 99344 18229</p>
-        <p>Address: Rajan Nagar, Coimbatore – 638451</p>
+    <!-- ABOUT -->
+    <div class="about-section">
+        <h2>About Me</h2>
+        <p>I am an Electronics and Communication Engineering student currently pursuing my B.E at SNS College of Technology, Coimbatore.</p>
+        <p>I have practical exposure to PCB manufacturing, circuit testing, IoT systems, and embedded electronics through internships and academic projects.</p>
+    </div>
 
+    <!-- SKILLS -->
+    <div class="skills-section">
         <h2>Skills</h2>
-        <ul>
-            <li>Problem Solving</li>
-            <li>Team Building</li>
-            <li>Decision Making</li>
-            <li>Python Programming</li>
-            <li>AutoDesk PowerShape</li>
-        </ul>
-
-        <h2>Languages</h2>
-        <ul>
-            <li>Tamil</li>
-            <li>Kannada</li>
-            <li>English</li>
-        </ul>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Electronics</h3>
+                <p>PCB Manufacturing, Circuit Testing, Soldering, Embedded Systems</p>
+            </div>
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Python, Arduino Programming</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Autodesk PowerShape, Arduino IDE</p>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <p>Decision Making, Team Building, Problem Solving</p>
+            </div>
+        </div>
     </div>
 
-    <!-- RIGHT SIDE -->
-    <div class="right">
-        <h1>GOKULRAJ R</h1>
+    <!-- EXPERIENCE -->
+    <div class="experience-section">
+        <h2>Experience</h2>
 
-        <div class="section">
-            <h3>Objective</h3>
-            <p>
-                Looking for a challenging job with a rapidly growing organization
-                that provides opportunities to achieve professional and organizational goals.
-            </p>
+        <div class="experience-item">
+            <h3>PCB Manufacturing Trainee – Pricol Pvt Ltd</h3>
+            <p class="date">July 2024 – January 2024</p>
+            <p>Worked on PCB manufacturing for vehicle speedometer systems. Involved in component mounting, soldering, routing, PCB testing, IC programming, and final assembly process.</p>
         </div>
-
-        <div class="section">
-            <h3>Experience</h3>
-            <p><b>Pricol Pvt Ltd – PCB Manufacturing</b>
-                <span class="date">Jul 2024 – Jan 2024</span>
-            </p>
-            <ul>
-                <li>Manufactured and assembled vehicle speedometer PCBs</li>
-                <li>PCB mounting, soldering, routing and IC programming</li>
-                <li>Final testing and assembly section handling</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Education</h3>
-            <p><b>Diploma in EEE</b> – Nanjiah Lingammal Polytechnic College
-                <span class="date">2020 – 2023</span><br>
-                Percentage: 73%
-            </p>
-            <p><b>B.E ECE</b> – SNS College of Technology, Coimbatore
-                <span class="date">2024 – 2027</span><br>
-                CGPA: 7.42
-            </p>
-        </div>
-
-        <div class="section">
-            <h3>Projects</h3>
-            <ul>
-                <li><b>Car Indicator using Gyro Sensor:</b>
-                    Automatic indicator activation during lane change using steering angle.
-                </li>
-                <li><b>Arduino Based Solar Position Changing:</b>
-                    Solar panel tracks sun position using LDR sensors for maximum power.
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Internship</h3>
-            <p>
-                <b>Smart Environment Monitoring System using IoT</b><br>
-                Designed an IoT system for real-time environmental data monitoring,
-                improving sensor accuracy and power efficiency.
-            </p>
-        </div>
-
     </div>
+
+    <!-- PROJECTS -->
+    <div class="projects-section">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Car Indicator Using Gyro Sensor</h3>
+            <p>Designed a safety system to reduce highway accidents using a gyro sensor. The indicator automatically turns ON when steering wheel angle exceeds 90°.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Arduino Based Solar Position Tracking</h3>
+            <p>Developed an automatic solar tracking system using LDR sensors and Arduino to maximize solar power efficiency.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Smart Environment Monitoring System (IoT)</h3>
+            <p>Designed an IoT-based system for real-time environmental monitoring with optimized sensor accuracy and power efficiency.</p>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Email: gokulraj172145@gmail.com | Phone: +91 993944182229</p>
+        <a href="mailto:gokulraj172145@gmail.com" class="contact-btn">Get In Touch</a>
+    </div>
+
 </div>
-
 </body>
 </html>
